@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<title>Docker app</title>
+		<link rel="shortcut icon" href="assets/img/favicon.png">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+		<link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<!-- Main Wrapper -->
+		<div class="main-wrapper">
+			<!-- Header -->
+			<div class="header">
+				<!-- Logo -->
+				<div class="header-left">
+					<a href="index.html" class="logo">
+						<img src="assets/img/logo.pngg" alt="Logo">
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+					</a>
+				</div>
+				<!-- /Logo -->
+				<!-- Sidebar Toggle -->
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fas fa-bars"></i>
+				</a>
+				<!-- /Sidebar Toggle -->
+				<!-- Search -->
+				
+				<!-- /Search -->
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fas fa-bars"></i>
+				</a>
+	
+				<ul class="nav user-menu">
+			
+					<li class="nav-item dropdown has-arrow main-drop">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<span class="user-img">
+								<img src="assets/img/aniki.jpg" alt="">
+								<span class="status online"></span>
+							</span>
+							<span>Admin</span>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#"><i data-feather="user" class="mr-1"></i> Profil</a>
+							<a class="dropdown-item" href="login.html"><i data-feather="log-out" class="mr-1"></i> Deconnexion</a>
+						</div>
+					</li>
+					<!-- /User Menu -->
+				</ul>
+				<!-- /Header Menu -->
+			</div>-->
+			
+			<!-- Sidebar -->
+			<div class="sidebar" id="sidebar">
+				<div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li class="menu-title"><span>Main</span></li>
+							<li>
+								<a href="index.html"><i data-feather="home"></i> <span>Dashboard</span></a>
+							</li>
+							<li>
+								<a href="docker.html"><i data-feather="users"></i> <span>Dockers</span></a>
+							</li>
+							<li>
+								<a href="estimates.html"><i data-feather="file-text"></i> <span>Fiche d'embauche journalière</span></a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /Sidebar -->
+			
+			<!-- Page Wrapper -->
+			<div class="page-wrapper">
+				<div class="content container-fluid">
+				
+					<!-- Page Header -->
+					<div class="page-header">
+						<div class="row">
+							<div class="col-sm-12">
+								<h3 class="page-title">Creer une fiche d'embauche</h3>
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+									<li class="breadcrumb-item"><a href="estimates.html">fiche d'embauche</a></li>
+									<li class="breadcrumb-item active">ajouter une fiche d'embauchee</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- /Page Header -->
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-body">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Entreprise:</label>
+													<select class="select">
+														<option>Selectionner l'entreprise</option>
+														<option>Haut Media Numerique</option>
+														<option>Aquilas ETS</option>
+														<option>Le martin pêcheur</option>
+													
+													</select>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>Debut</label>
+													<div class="cal-icon">
+														<input class="form-control datetimepicker" type="text">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="form-group">
+													<label>fin</label>
+													<div class="cal-icon">
+														<input class="form-control datetimepicker" type="text">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4 mt-3">
+												<div class="form-group">
+													<label>Nombre de docker</label>
+													<input type="number" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="text-right mt-4">
+											<button type="submit" class="btn btn-primary" onclick="delayed_blah()">Générer les dockers</button>
+										</div>
+
+										<div  role="status" id="loader">
+											<span class="sr-only">Loading...</span>
+										  </div>
+										<div class="table-responsive mt-4">
+											<table class="table table-stripped table-center table-hover">
+												<thead>
+													<tr>
+														<th>Docker</th>
+														<th>Matricule</th>
+														<th>periode (Jour/Nuit)</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<input type="text" class="form-control" value="soro hamed" disabled>
+														</td>
+														<td>
+															<input type="text" class="form-control" value="FDFH154" disabled>
+														</td>
+														<td>
+															<input type="text" class="form-control" value="Jour" disabled>
+														</td>
+													
+													</tr>
+													<tr>
+														<td>
+															<input type="text" class="form-control" value="Jean aquilas Boua" disabled>
+														</td>
+														<td>
+															<input type="text" class="form-control" value="SHFG451" disabled>
+														</td>
+														<td>
+															<input type="text" class="form-control" value="Jour" disabled>
+														</td>
+													
+													</tr>
+													<tr>
+														<td>
+															<input type="text" class="form-control" value="Herman Littie" disabled>
+														</td>
+														<td>
+															<input type="text" class="form-control" value="SHGQF47" disabled>
+														</td>
+														<td>
+															<input type="text" class="form-control" value="Nuit" disabled>
+														</td>
+													
+													</tr>
+													<tr>
+														<td>
+															<input type="text" class="form-control" value="Kouassi andré" disabled>
+														</td>
+														<td>
+															<input type="text" class="form-control" value="QSYRT78" disabled>
+														</td>
+														<td>
+															<input type="text" class="form-control" value="Nuit" disabled>
+														</td>
+													
+													</tr>
+													
+												</tbody>
+											</table>
+										</div>
+										
+										<div class="text-right mt-4">
+											<button type="submit" class="btn btn-primary">Enregister la fiche d'embauche</button>
+										</div>
+										
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Page Wrapper -->
+			
+		</div>
+		<script src="assets/js/jquery-3.5.1.min.js"></script>
+		
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<script src="assets/js/feather.min.js"></script>
+
+		<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<script src="assets/plugins/select2/js/select2.min.js"></script>
+
+		<script src="assets/plugins/moment/moment.min.js"></script>
+		<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="assets/js/script.js"></script>
+        <script>
+				const stop = document.getElementById("loader").setAttribute("class", "spinner-bor");
+			function blabla(){
+				document.getElementById("loader").setAttribute("class", "spinner-border text-primary");
+
+			}
+						function delayed_blah() {
+				setTimeout(blabla, 2000);
+			}
+
+			// if (window.addEventListener) {
+			// 	window.addEventListener('load', delayed_blah, );
+			// } else {
+			// 	window.attachEvent('onload', delayed_blah ,false);
+			// 	document.getElementById("loader").setAttribute("class", "spinner-border text-primary");
+			// }
+		</script>
+	</body>
+
+
+</html>
